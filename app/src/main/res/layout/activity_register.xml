@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="registerVM" type="com.munirasapplication.app.modules.register.data.viewmodel.RegisterVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearRegister"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleblack_900">
+        <FrameLayout android:gravity="start"
+            android:id="@+id/frameStackregister"
+            android:layout_height="@dimen/_212pxv" android:layout_width="match_parent">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRegister"
+                android:layout_gravity="bottom|center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_33pxv"
+                android:layout_marginEnd="@dimen/_119pxh"
+                android:layout_marginStart="@dimen/_119pxh"
+                android:layout_marginTop="@dimen/_33pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{registerVM.registerModel.txtRegister}"
+                style="@style/txtPortLligatSlabregular36" tools:text="@string/lbl_register"/>
+            <View android:background="@color/bluegray_100_30"
+                android:id="@+id/viewRectangleEight"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_212pxv" android:layout_width="@dimen/_360pxh"/>
+        </FrameLayout>
+        <EditText
+            android:background="@drawable/rectangle_bg_bluegray_100_89_radius_10"
+            android:ellipsize="end" android:hint="@string/lbl_email"
+            android:id="@+id/etLanguage"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_50pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_13pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_13pxv" android:singleLine="true"
+            android:text="@={registerVM.registerModel.etLanguageValue}"
+            android:textColorHint="@color/white_A700"
+            style="@style/etSolidRounded" tools:ignore="Autofill"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_600_radius_10"
+            android:ellipsize="end" android:hint="@string/lbl_password"
+            android:id="@+id/etGroupSix"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_50pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_71pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_12pxv" android:singleLine="true"
+            android:text="@={registerVM.registerModel.etGroupSixValue}"
+            android:textColorHint="@color/white_A700"
+            style="@style/etSolidRounded_1" tools:ignore="Autofill"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnRegisterOne"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_83pxh"
+            android:layout_marginStart="@dimen/_83pxh"
+            android:layout_marginTop="@dimen/_56pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_7pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_7pxv" android:singleLine="true"
+            android:text="@string/lbl_register2"
+            android:textAllCaps="false" style="@style/btnSolidRounded" tools:text="@string/lbl_register2"/>
+    </LinearLayout>
+</layout>

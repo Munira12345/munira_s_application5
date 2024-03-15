@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="settingsVM" type="com.munirasapplication.app.modules.settings.data.viewmodel.SettingsVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearSettings"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleblack_900">
+        <LinearLayout android:id="@+id/linearColumnsettings"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <FrameLayout android:gravity="start"
+                android:id="@+id/frameStacksettings"
+                android:layout_height="@dimen/_139pxv" android:layout_width="match_parent">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSettings"
+                    android:layout_gravity="top|start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_43pxv"
+                    android:layout_marginEnd="@dimen/_110pxh"
+                    android:layout_marginStart="@dimen/_110pxh"
+                    android:layout_marginTop="@dimen/_43pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtSettings}"
+                    style="@style/txtPortLligatSlabregular32" tools:text="@string/lbl_settings"/>
+                <ImageView android:id="@+id/imageRectangleEight"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_139pxh"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_rectangle8}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle8"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguage"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_118pxh"
+                android:layout_marginStart="@dimen/_118pxh"
+                android:layout_marginTop="@dimen/_33pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtLanguage}"
+                style="@style/txtPortLligatSlabregular20" tools:text="@string/lbl_change_email"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_110pxh"
+                android:layout_marginStart="@dimen/_110pxh"
+                android:layout_marginTop="@dimen/_43pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtLanguageOne}"
+                style="@style/txtPortLligatSlabregular20" tools:text="@string/lbl_change_password"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageTwo"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_110pxh"
+                android:layout_marginStart="@dimen/_110pxh"
+                android:layout_marginTop="@dimen/_179pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtLanguageTwo}"
+                style="@style/txtPortLligatSlabregular20" tools:text="@string/lbl_delete_account"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameBottombar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStylegray_600_8c">
+            <LinearLayout android:id="@+id/linearRowhome"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_12pxv"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageHome"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_22pxh"
+                    android:layout_marginBottom="@dimen/_3pxv"
+                    android:layout_marginStart="@dimen/_50pxh"
+                    android:layout_width="@dimen/_25pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_home_black_903"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_home_black_903"/>
+                <ImageView android:id="@+id/imageBookmark"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_25pxh"
+                    android:layout_marginStart="@dimen/_96pxh"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_bookmark_black_905"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark_black_905"/>
+                <ImageView android:id="@+id/imageLock"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_25pxh"
+                    android:layout_marginEnd="@dimen/_49pxh"
+                    android:layout_marginStart="@dimen/_96pxh"
+                    android:layout_width="@dimen/_25pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_lock_purple_a100"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_lock_purple_a100"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>
