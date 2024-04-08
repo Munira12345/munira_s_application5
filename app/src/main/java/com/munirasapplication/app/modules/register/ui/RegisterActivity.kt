@@ -19,7 +19,7 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.registerVM = viewModel
   }
-
+// click listeners
   override fun setUpClicks(): Unit {
     binding.btnRegisterOne.setOnClickListener {
       val destIntent = HomescreenActivity.getIntent(this, null)
