@@ -1,25 +1,18 @@
 package com.munirasapplication.app.modules.homescreen.ui
-
-import android.content.Context
-import android.content.Intent
+// Activity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.munirasapplication.app.R
+import androidx.lifecycle.Observer
 import com.munirasapplication.app.appcomponents.base.BaseActivity
 import com.munirasapplication.app.databinding.ActivityHomescreenBinding
-import com.munirasapplication.app.modules.homescreen.`data`.viewmodel.HomescreenVM
-import kotlin.String
-import kotlin.Unit
 
 class HomescreenActivity : BaseActivity<ActivityHomescreenBinding>(R.layout.activity_homescreen) {
   private val viewModel: HomescreenVM by viewModels<HomescreenVM>()
 
-
-  //added code
   override fun onCreate(savedInstanceState: Bundle?) {
-    super.oncreate(savedInstanceState)
+    super.onCreate(savedInstanceState)
 
-// Fetch random quote from ZenQuotes API
+    // Fetch random quote from ZenQuotes API
     viewModel.fetchRandomQuote()
 
     // Observe LiveData variables to update UI when quote changes
@@ -31,13 +24,13 @@ class HomescreenActivity : BaseActivity<ActivityHomescreenBinding>(R.layout.acti
     })
   }
 
-
-  override fun onInitialized(): Unit {
+  override fun onInitialized() {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.homescreenVM = viewModel
   }
 
-  override fun setUpClicks(): Unit {
+  override fun setUpClicks() {
+    // Set up click listeners if needed
   }
 
   companion object {
@@ -49,5 +42,8 @@ class HomescreenActivity : BaseActivity<ActivityHomescreenBinding>(R.layout.acti
       destIntent.putExtra("bundle", bundle)
       return destIntent
     }
-  }
-}
+  }}
+
+
+
+

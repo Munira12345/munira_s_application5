@@ -1,18 +1,16 @@
 package com.munirasapplication.app.modules.homescreen.`data`.viewmodel
-
-import android.os.Bundle
+// ViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.munirasapplication.app.modules.homescreen.`data`.model.HomescreenModel
-import org.koin.core.KoinComponent
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import org.json.JSONArray
+import java.net.URL
 
-class HomescreenVM : ViewModel(), KoinComponent {
-  val homescreenModel: MutableLiveData<HomescreenModel> = MutableLiveData(HomescreenModel())
+class HomescreenVM : ViewModel() {
+  val quoteTextLiveData: MutableLiveData<String> = MutableLiveData()
+  val authorLiveData: MutableLiveData<String> = MutableLiveData()
 
-  var navArguments: Bundle? = null
-
-  //added code for json data
-  // Function to fetch random quote from ZenQuotes API
   fun fetchRandomQuote() {
     viewModelScope.launch {
       try {
@@ -30,14 +28,13 @@ class HomescreenVM : ViewModel(), KoinComponent {
           val author = quoteObject.getString("a")
 
           // Update LiveData variables with quote text and author
-          _quoteTextLiveData.value = quote
-          _authorLiveData.value = author
+          quoteTextLiveData.value = quote
+          authorLiveData.value = author
         }
       } catch (e: Exception) {
         e.printStackTrace()
+        // Handle error
       }
     }
-
-
-
-}}
+  }
+}
