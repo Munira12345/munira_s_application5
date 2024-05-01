@@ -14,6 +14,24 @@ import kotlin.Unit
 class HomescreenActivity : BaseActivity<ActivityHomescreenBinding>(R.layout.activity_homescreen) {
   private val viewModel: HomescreenVM by viewModels<HomescreenVM>()
 
+
+  //added code
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.oncreate(savedInstanceState)
+
+// Fetch random quote from ZenQuotes API
+    viewModel.fetchRandomQuote()
+
+    // Observe LiveData variables to update UI when quote changes
+    viewModel.quoteTextLiveData.observe(this, Observer { quoteText ->
+      binding.txtDailybeautiful.text = quoteText
+    })
+    viewModel.authorLiveData.observe(this, Observer { author ->
+      // Update TextView with author name
+    })
+  }
+
+
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.homescreenVM = viewModel
