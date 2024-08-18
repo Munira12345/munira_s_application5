@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "munira_s_application5"
+rootProject.name = "mindful_quotes"
