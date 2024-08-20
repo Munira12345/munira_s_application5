@@ -8,6 +8,8 @@ import com.munirasapplication.app.appcomponents.base.BaseActivity
 import com.munirasapplication.app.databinding.ActivityHomescreenBinding
 import com.munirasapplication.app.modules.homescreen.data.viewmodel.HomescreenVM
 
+
+
 class HomescreenActivity : BaseActivity<ActivityHomescreenBinding>(R.layout.activity_homescreen) {
   private val viewModel: HomescreenVM by viewModels<HomescreenVM>()
 
