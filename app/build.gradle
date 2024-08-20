@@ -13,18 +13,21 @@ def glideVersion = '4.11.0'
 
 
 android {
+    namespace 'com.mindful_quotes'
     compileSdkVersion 33
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.munirasapplication.app"
+        applicationId "com.mindful_quotes"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
