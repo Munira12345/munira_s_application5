@@ -17,6 +17,7 @@
             android:layout_height="530dp"
             android:layout_gravity="top|center"
             android:layout_marginStart="@dimen/_22pxh"
+
             android:layout_marginEnd="20.0dp"
             android:layout_marginBottom="@dimen/_10pxv"
             android:orientation="vertical">
