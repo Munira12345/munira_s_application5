@@ -1,8 +1,11 @@
 package com.munirasapplication.app.modules.homescreen.`data`.viewmodel
 // ViewModel
+import android.os.Bundle
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.munirasapplication.app.modules.homescreen.data.model.homescreenModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -10,6 +13,14 @@ import org.json.JSONArray
 import java.net.URL
 
 class HomescreenVM : ViewModel() {
+
+  // Private MutableLiveData to hold the homescreenModel data
+  private val _homescreenModel = MutableLiveData<homescreenModel>()
+  val homescreenModel: LiveData<homescreenModel>
+    get() = _homescreenModel
+
+  var navArguments: Bundle? = null
+
   val quoteTextLiveData: MutableLiveData<String> = MutableLiveData()
   val authorLiveData: MutableLiveData<String> = MutableLiveData()
 

@@ -4,7 +4,7 @@ import com.munirasapplication.app.R
 import com.munirasapplication.app.appcomponents.di.MyApp
 import kotlin.String
 
-data class HomescreenModel(
+data class homescreenModel(
   /**
    * TODO Replace with dynamic value
    */
