@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.activity.viewModels
-import com.munirasapplication.app.R
+import com.mindful_quotes.R
+import com.mindful_quotes.databinding.ActivityLoginBinding
 import com.munirasapplication.app.appcomponents.base.BaseActivity
-import com.munirasapplication.app.databinding.ActivityLoginBinding
 import com.munirasapplication.app.modules.homescreen.ui.HomescreenActivity
 import com.munirasapplication.app.modules.login.`data`.viewmodel.LoginVM
 import com.munirasapplication.app.modules.register.ui.RegisterActivity

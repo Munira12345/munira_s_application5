@@ -4,9 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.munirasapplication.app.R
+import com.mindful_quotes.R
+import com.mindful_quotes.databinding.ActivityRegisterBinding
 import com.munirasapplication.app.appcomponents.base.BaseActivity
-import com.munirasapplication.app.databinding.ActivityRegisterBinding
 import com.munirasapplication.app.modules.homescreen.ui.HomescreenActivity
 import com.munirasapplication.app.modules.register.`data`.viewmodel.RegisterVM
 import kotlin.String

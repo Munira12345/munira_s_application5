@@ -1,9 +1,9 @@
 package com.munirasapplication.app.modules.favourites.ui
 
 import androidx.activity.viewModels
-import com.munirasapplication.app.R
+import com.mindful_quotes.R
+import com.mindful_quotes.databinding.ActivityFavouritesBinding
 import com.munirasapplication.app.appcomponents.base.BaseActivity
-import com.munirasapplication.app.databinding.ActivityFavouritesBinding
 import com.munirasapplication.app.modules.favourites.`data`.viewmodel.FavouritesVM
 import kotlin.String
 import kotlin.Unit

@@ -5,9 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import com.munirasapplication.app.R
+import com.mindful_quotes.R
+import com.mindful_quotes.databinding.ActivityHomescreenBinding
 import com.munirasapplication.app.appcomponents.base.BaseActivity
-import com.munirasapplication.app.databinding.ActivityHomescreenBinding
 import com.munirasapplication.app.modules.homescreen.data.viewmodel.HomescreenVM
 
 
@@ -27,7 +27,7 @@ class HomescreenActivity : BaseActivity<ActivityHomescreenBinding>(R.layout.acti
     })
     viewModel.authorLiveData.observe(this, Observer { author ->
        //Update TextView with author name
-          binding.txtAuthor.text = author
+          binding.txtauthor.text = author
       })
   }
 

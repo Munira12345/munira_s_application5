@@ -1,9 +1,9 @@
 package com.munirasapplication.app.modules.settings.ui
 
 import androidx.activity.viewModels
-import com.munirasapplication.app.R
+import com.mindful_quotes.R
+import com.mindful_quotes.databinding.ActivitySettingsBinding
 import com.munirasapplication.app.appcomponents.base.BaseActivity
-import com.munirasapplication.app.databinding.ActivitySettingsBinding
 import com.munirasapplication.app.modules.login.ui.LoginActivity
 import com.munirasapplication.app.modules.settings.`data`.viewmodel.SettingsVM
 import kotlin.String
