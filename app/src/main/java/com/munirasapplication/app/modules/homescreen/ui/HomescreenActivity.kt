@@ -23,11 +23,12 @@ class HomescreenActivity : BaseActivity<ActivityHomescreenBinding>(R.layout.acti
 
     // Observe LiveData variables to update UI when quote changes
     viewModel.quoteTextLiveData.observe(this, Observer { quoteText ->
-      binding.txtDailybeautiful.text = quoteText
+      binding.txtTheBeginningi.text = quoteText
     })
     viewModel.authorLiveData.observe(this, Observer { author ->
-      // Update TextView with author name
-    })
+       //Update TextView with author name
+          binding.txtAuthor.text = author
+      })
   }
 
   override fun onInitialized() {

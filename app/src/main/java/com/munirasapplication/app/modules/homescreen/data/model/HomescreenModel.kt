@@ -16,5 +16,10 @@ data class homescreenModel(
    */
   var txtTheBeginningi: String? =
       MyApp.getInstance().resources.getString(R.string.msg_the_beginning_i)
-
+,
+  /**
+   * Author of the quote
+   */
+  var txtauthor: String? = null
 )
+

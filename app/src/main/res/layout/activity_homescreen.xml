@@ -40,7 +40,6 @@
                 android:layout_width="@dimen/_25pxh"
                 android:layout_height="@dimen/_25pxh"
                 android:layout_gravity="end"
-
                 android:layout_marginStart="@dimen/_280pxh"
                 android:layout_marginTop="@dimen/_5pxv"
                 android:layout_marginEnd="@dimen/_10pxh"
@@ -79,9 +78,17 @@
                     android:gravity="top|start"
                     android:text="@{homescreenVM.homescreenModel.txtTheBeginningi}"
                     tools:text="@string/msg_the_beginning_i" />
-            </FrameLayout>
+                <TextView
+                    android:id="@+id/txtauthor"
+                    style="@style/txtSanchezregular32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:text="@{homescreenVM.authorLiveData}"
 
-            <LinearLayout
+                tools:text="Author Name" />
+            </FrameLayout>
+       <LinearLayout
                 android:id="@+id/linearRowsend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
