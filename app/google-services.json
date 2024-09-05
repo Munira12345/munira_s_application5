@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "780158409328",
+    "project_id": "mindfulquotes-9c4f8",
+    "storage_bucket": "mindfulquotes-9c4f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780158409328:android:25bf3ca26957142662b2b5",
+        "android_client_info": {
+          "package_name": "com.mindful_quotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHnp9WjwwBqfh6eoK9WbUASqUXO4ltfrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
