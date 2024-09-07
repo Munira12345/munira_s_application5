@@ -1,7 +1,7 @@
 package com.munirasapplication.app
 
+import com.mindful_quotes.databinding.LayoutProgressDialogBinding
 import com.munirasapplication.app.appcomponents.base.BaseActivity
-import com.munirasapplication.app.databinding.LayoutProgressDialogBinding
 
 class MainActivity : BaseActivity<LayoutProgressDialogBinding>(R.layout.layout_progress_dialog) {
 

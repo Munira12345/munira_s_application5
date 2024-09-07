@@ -2,6 +2,7 @@ package com.munirasapplication.app.appcomponents.di
 
 import android.app.Application
 import com.munirasapplication.app.appcomponents.utility.PreferenceHelper
+import com.munirasapplication.firebaseDependencies.firebaseModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.loadKoinModules
@@ -44,6 +45,7 @@ class MyApp : Application() {
     private fun getKoinModules(): MutableList<Module> {
         val koinModules = mutableListOf<Module>()
         koinModules.add(preferenceModule()) //register preference module
+        koinModules.add(firebaseModule())
         return koinModules
     }
 

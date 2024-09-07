@@ -1,2 +1,4 @@
 include ':app'
 rootProject.name = "mindful_quotes"
+include ':mylibrary'
+include ':firebaseDependencies'
