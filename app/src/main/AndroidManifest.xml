@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest package="com.munirasapplication.app" xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android:name="com.facebook.katana.provider.PLATFORM_PROVIDER"  
+ />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <provider android:authorities="com.facebook.app.FacebookContentProvider{1169805374314110}"
+        android:name="com.facebook.FacebookContentProvider"
+        android:exported="true"/>
+    <queries>
+        <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
+    </queries>
     <application android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name" android:largeHeap="true"

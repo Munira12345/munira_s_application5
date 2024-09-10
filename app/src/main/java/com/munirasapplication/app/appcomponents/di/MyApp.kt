@@ -25,6 +25,10 @@ class MyApp : Application() {
         }
     }
 
+    override fun onCreate() {
+        super.onCreate()
+        FacebookSdk.sdkInitialize(this)
+    }
     /**
      * method which prepares [PreferenceHelper]s koin module
      * @return [Module] - the koin module
