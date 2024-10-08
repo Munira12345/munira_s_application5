@@ -1,6 +1,8 @@
 package com.munirasapplication.app.appcomponents.di
 
+import QuoteDatabase
 import android.app.Application
+import androidx.room.Room
 import com.munirasapplication.app.appcomponents.utility.PreferenceHelper
 import com.munirasapplication.firebaseDependencies.firebaseModule
 import org.koin.android.ext.koin.androidContext
@@ -11,13 +13,23 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 /**
- * The application class which used to start koin for dependency injection
+ * The application class which is used to start Koin for dependency injection.
  */
 class MyApp : Application() {
+    private lateinit var database: QuoteDatabase
 
-    public override fun onCreate(): Unit {
+    override fun onCreate() {
         super.onCreate()
         instance = this
+
+        // Initialize Room database
+        database = Room.databaseBuilder(
+            applicationContext,
+            QuoteDatabase::class.java,
+            "quote_database"
+        ).build()
+
+        // Start Koin
         startKoin {
             androidLogger()
             androidContext(this@MyApp)
@@ -25,42 +37,41 @@ class MyApp : Application() {
         }
     }
 
-    override fun onCreate() {
-        super.onCreate()
-        FacebookSdk.sdkInitialize(this)
+    // Getter for the database
+    fun getDatabase(): QuoteDatabase {
+        return database
     }
+
     /**
-     * method which prepares [PreferenceHelper]s koin module
-     * @return [Module] - the koin module
+     * Method which prepares [PreferenceHelper]'s Koin module
+     * @return [Module] - the Koin module
      */
     private fun preferenceModule(): Module {
-        val prefsModule = module {
+        return module {
             single {
                 PreferenceHelper()
             }
         }
-        return prefsModule
     }
 
     /**
-     * method which returns the list of koin module to register
-     * @return MutableList<Module> - list of koin modules
+     * Method which returns the list of Koin modules to register
+     * @return MutableList<Module> - list of Koin modules
      */
     private fun getKoinModules(): MutableList<Module> {
-        val koinModules = mutableListOf<Module>()
-        koinModules.add(preferenceModule()) //register preference module
-        koinModules.add(firebaseModule())
-        return koinModules
+        return mutableListOf<Module>().apply {
+            add(preferenceModule()) // Register preference module
+          //  add(firebaseModule())   // Register Firebase module
+        }
     }
 
-    public companion object {
-
-        // the application instance
+    companion object {
+        // The application instance
         private lateinit var instance: MyApp
 
         /**
-         * method to get instance of application object
+         * Method to get instance of application object
          */
-        public fun getInstance(): MyApp = instance
+        fun getInstance(): MyApp = instance
     }
 }

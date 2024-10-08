@@ -1,11 +1,12 @@
 package com.munirasapplication.app.modules.homescreen.`data`.viewmodel
-// ViewModel
+import QuoteDao
 import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.munirasapplication.app.modules.homescreen.data.model.homescreenModel
+import data.Quote
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -14,7 +15,7 @@ import java.net.URL
 
 class HomescreenVM : ViewModel() {
 
-  // Private MutableLiveData to hold the homescreenModel data
+  // Private MutableLiveData to hold the home screenModel data
   private val _homescreenModel = MutableLiveData<homescreenModel>()
   val homescreenModel: LiveData<homescreenModel>
     get() = _homescreenModel
@@ -23,6 +24,15 @@ class HomescreenVM : ViewModel() {
 
   val quoteTextLiveData: MutableLiveData<String> = MutableLiveData()
   val authorLiveData: MutableLiveData<String> = MutableLiveData()
+
+  class HomescreenVM(private val quoteDao: QuoteDao) {
+    fun saveQuote(quote: Quote) {
+      viewModelScope.launch {
+        quoteDao.insertQuote(quote)
+      }
+    }
+  }
+
 
   fun fetchRandomQuote() {
     viewModelScope.launch {

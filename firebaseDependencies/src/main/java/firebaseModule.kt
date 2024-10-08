@@ -15,5 +15,4 @@ fun firebaseModule(): Module {
     }
     return firebaseModule
 }
-
 // compile 'com.facebook.android:facebook-share:latest.release' add in build.gradle dependencies
