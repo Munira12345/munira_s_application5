@@ -7,6 +7,7 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 // still having an issue with firebase analytics might have to remove then try the api first
 
+
 /*run app with module changes
 * */
 
