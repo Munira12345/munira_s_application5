@@ -61,7 +61,7 @@ class MyApp : Application() {
     private fun getKoinModules(): MutableList<Module> {
         return mutableListOf<Module>().apply {
             add(preferenceModule()) // Register preference module
-          //  add(firebaseModule())   // Register Firebase module
+            add(firebaseModule())   // Register Firebase module
         }
     }
 
