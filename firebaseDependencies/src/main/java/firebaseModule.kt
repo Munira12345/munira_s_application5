@@ -12,6 +12,7 @@ import org.koin.dsl.module
 * */
 
 fun firebaseModule(): Module {
+
     val firebaseModule = module {
         single<Firebase> { Firebase.initialize(applicationContext) } // Use applicationContext
     }
