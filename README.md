@@ -1,12 +1,14 @@
 
 # munira_s_application5
 
+QuotesApp – Inspiration at Your Fingertips
+In a world where words hold power, QuotesApp brings you a daily dose of wisdom, motivation, and thought-provoking insights. Whether you seek inspiration, humor, or deep reflections, this app curates and delivers beautifully presented quotes from a variety of sources.
+
 Built with AndroidX Support
 
 Requires Android Studio Arctic Fox | 2020.3.1 or higher.
 
 Current Kotlin Version 1.7.20
-
 
 ### SDK Versions
 
